@@ -1,0 +1,11 @@
+<a id="copied-text">この文章をコピーするよ</a>
+<button id="copy-btn" class="button">コピーする！</button>
+
+<script>
+  const text = document.getElementById("copied-text").textContent;
+
+  document.getElementById("copied-text").addEventListener("click", async () => {
+    await navigator.clipboard.writeText(text);
+    alert("クリップボードにコピーしました！");
+  });
+</script>
